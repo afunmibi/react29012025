@@ -23,7 +23,7 @@ const Joblisting = ({job}) => {
 
               <div className="mb-5">
               {description}
-              <button className='text-indigo-500' onClick={changeText}>{setFullText ?'Less':'More'}</button>
+              <button className='text-indigo-500' onClick={changeText}>{fullText ?'Less' : 'More'}</button>
               </div>
 
               <h3 className="text-indigo-500 mb-2">{job.salary} / Year</h3>
@@ -37,7 +37,7 @@ const Joblisting = ({job}) => {
                  {job.location}
                 </div>
                 <Link
-                  to="/jobs"
+                  to={`/jobs/${job.id}`}
                   className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm"
                 >
                  Read More
